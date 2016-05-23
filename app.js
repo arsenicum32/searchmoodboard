@@ -25,8 +25,8 @@ app.get('/search/:q', function (req, res, next) {
   }
 });
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
+app.listen( 8700, function () {
+  console.log('Example app listening on port 8700!');
 });
 
 

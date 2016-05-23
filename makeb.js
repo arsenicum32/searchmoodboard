@@ -30,7 +30,7 @@ var fs = require('fs');
 //   console.log(val);
 // });
 
-var querystring = 'https://yandex.com/search/xml?l10n=en&user=zombiehot&key=03.79693390:7b9d07a2ea90192104f6aebe3c6726a6';
+var querystring = 'https://yandex.ru/search/xml?user=zombiehot&key=03.79693390:7b9d07a2ea90192104f6aebe3c6726a6';
 
 function yandex(query , callback){
   var output = chance.string() + '_' + query;
