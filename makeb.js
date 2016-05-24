@@ -39,6 +39,7 @@ function yandex(query , callback){
     else{
       $ = cheerio.load(body);
       $('url').each(function(i){
+        console.log(i);
         if($(this).html()){
           elreq( $(this).html() , output );
           addsite( $(this).html() );
