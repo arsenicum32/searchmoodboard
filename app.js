@@ -14,13 +14,13 @@ app.get('/', function (req, res, next) {
 var lquery = (new Date()).getTime();
 
 app.get('/search/:q', function (req, res, next) {
-  if(req.params.q && (new Date()).getTime() - lquery > 5000 ){
+  if(req.params.q && (new Date()).getTime() - lquery > 50 ){
     lquery = (new Date()).getTime();
     yandex(req.params.q, function(dt){
       res.send(dt);
     });
   }else{
-    res.send('wait 5s for next response');
+    res.send('wait 50ms for next response');
   }
 });
 
