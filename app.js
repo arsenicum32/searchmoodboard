@@ -10,18 +10,10 @@ app.get('/', function (req, res, next) {
   res.sendFile('./public/index.html');
 });
 
-
-var lquery = (new Date()).getTime();
-
 app.get('/search/:q', function (req, res, next) {
-  if(req.params.q && (new Date()).getTime() - lquery > 50 ){
-    lquery = (new Date()).getTime();
-    yandex(req.params.q, function(dt){
-      res.send(dt);
-    });
-  }else{
-    res.send('wait 50ms for next response');
-  }
+  yandex(req.params.q, function(dt){
+    res.send(dt);
+  });
 });
 
 app.listen( 8700, function () {
