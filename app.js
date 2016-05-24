@@ -20,8 +20,7 @@ app.get('/search/:q', function (req, res, next) {
       res.send(dt);
     });
   }else{
-    res.status(502);
-    res.end('wait 5s for next response');
+    res.send('wait 5s for next response');
   }
 });
 

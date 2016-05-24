@@ -13,7 +13,7 @@ document.body.addEventListener('keypress', function(e) {
     } else {
       // вывести результат
       yet = false;
-      p.innerHTML = '<a href="/gen/'+xhr.responseText+'.html">your moodboard</a>';
+      p.innerHTML = '<a href="/gen/'+xhr.responseText+'.html">'+xhr.responseText+'</a>';
       // setTimeout(function(){
       //    window.location.href = '/gen/'+xhr.responseText+'.html';
       // }, 2200);
