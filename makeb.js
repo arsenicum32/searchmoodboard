@@ -32,7 +32,7 @@ var fs = require('fs');
 
 var querystring = 'https://yandex.ru/search/xml?user=zombiehot&key=03.79693390:7b9d07a2ea90192104f6aebe3c6726a6';
 
-function yandex(query , callback){
+function yandex(query , callback, testmode){
   var output = chance.string() + '_' + query;
   request( querystring +'&query='+query, function(err, res, body){
     if(err){console.log(err);}
@@ -46,7 +46,7 @@ function yandex(query , callback){
           savequery( query );
         }
       })
-      if(callback) callback( output );
+      if(callback) callback( testmode?body:output );
     }
   })
 }

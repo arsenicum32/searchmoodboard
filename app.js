@@ -16,6 +16,12 @@ app.get('/search/:q', function (req, res, next) {
   });
 });
 
+app.get('/search/test/:q', function (req, res, next) {
+  yandex(req.params.q, function(dt){
+    res.send(dt);
+  }, true);
+});
+
 app.listen( 8700, function () {
   console.log('Example app listening on port 8700!');
 });
